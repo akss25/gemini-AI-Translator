@@ -1,0 +1,51 @@
+.history-container {
+  position: relative;
+  padding: 30px 10px 30px 10px;
+}
+
+.history-icon-close {
+  position: absolute;
+  right: 0;
+}
+
+.translation-card {
+  background-color: transparent;
+  color: antiquewhite;
+  border-bottom: 1px solid rgb(62, 62, 62);
+  margin-top: 25px;
+}
+
+.translation-card-date-language {
+  border-bottom: 1px solid rgb(62, 62, 62);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 5px;
+}
+
+.translation-card-date-language > p {
+  margin: 0;
+}
+
+.translation-date {
+  color: #a0beee;
+}
+
+.translation-text {
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+
+.translation-text > p {
+  margin: 0;
+}
+
+.translation-text > p:nth-of-type(1) {
+  color: #d9d9d9;
+}
+
+.translation-text > p:nth-of-type(2) {
+  color: #b3b5b5;
+}

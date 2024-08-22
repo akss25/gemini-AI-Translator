@@ -1,0 +1,347 @@
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* background-image: linear-gradient(to bottom right, #a1c4fd, #c2e9fb); */
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  /* background: #a8bdd0; */
+}
+
+h1 {
+  margin-top: 0;
+  color: #cdcdcf;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 32px auto;
+  background: #1d1b24;
+  padding: 16px 32px;
+  box-shadow: 0 4px 40px -8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  /* border: 1px solid red; */
+  min-height: 700px;
+  /* height: 95%; */
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container form label {
+  background: #a2d2ff;
+  color: #023047;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.container form input[type="radio"]:checked + label {
+  background: #023047;
+  color: #fff;
+  font-weight: bold;
+}
+
+.container .choices {
+  display: flex;
+  gap: 20px;
+}
+
+.container form input[type="radio"] {
+  display: none;
+}
+
+.container textarea {
+  padding: 15px 45px 15px 15px;
+  font-size: 20px;
+  height: 140px;
+  resize: none;
+  line-height: 1.7;
+
+  border-radius: 25px;
+  background: linear-gradient(
+    to bottom right,
+    #2d273f 0%,
+    #2d293f 50%,
+    #312743 50%,
+    #533655 100%
+  );
+  color: white;
+}
+
+.container textarea:focus {
+  outline: none !important;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #719ece;
+}
+
+.container button {
+  padding: 8px;
+  font-size: 20px;
+  border: none;
+  color: #eaeaed;
+  cursor: pointer;
+  border-radius: 25px;
+  background: linear-gradient(to bottom right, #de6adc, #9361e9);
+  background-blend-mode: multiply;
+}
+
+.container button:hover {
+  /* color: black; */
+  background: linear-gradient(to bottom right, #c166df, #bd66e1),
+    /* Adjust gradient for hover */
+      linear-gradient(to top right, #de6adc, #9361e9);
+  background-blend-mode: multiply;
+  transform: scale(1.001); /* Slightly enlarge the button on hover */
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.container h1 {
+  font-family: "Lobster", sans-serif;
+  margin-bottom: 0;
+}
+
+.container > p {
+  /* font-family: "Lobster", sans-serif; */
+  font-family: "Open Sans", sans-serif;
+  /* font-family: 'Roboto', sans-serif;; */
+  font-size: 14px;
+  margin: 0;
+  color: #7c7c7c;
+}
+
+.translation-text-form {
+  position: relative;
+}
+
+.translation-text-removal-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+  color: #cdcdcf;
+}
+
+.translation-text-removal-icon:hover {
+  cursor: pointer;
+}
+
+.translation {
+  min-height: 160px;
+  margin-top: 15px;
+  padding: 15px;
+  position: relative;
+  padding-bottom: 50px;
+  background: linear-gradient(
+    to bottom right,
+    #2d273f 0%,
+    #2d293f 50%,
+    #312743 50%,
+    #533655 100%
+  );
+  border-radius: 20px;
+  color: #d7d5db;
+}
+
+.translation-button {
+  width: 100%;
+  margin-top: 20px;
+  color: #cdcdcf;
+}
+
+.translation-handle-buttons {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.copy-button,
+.speaker-button {
+  transition: scale 0.2s ease-in-out;
+  /* transition: color 0.01s ease-in-out; */
+  font-size: 20px;
+  color: #cdcdcf;
+}
+
+.speaker-button:hover,
+.copy-button:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.notification {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100px);
+  background: #023047;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  transition: all 400ms ease;
+}
+
+.notification.active {
+  transform: translate(-50%, -30px);
+}
+
+.error {
+  color: red;
+}
+
+/* dropdown */
+
+/* .language-dropdown {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.language-dropdown > span {
+  font-size: 17px;
+}
+
+.language-dropdown > select {
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  border: 1px solid rgb(172, 95, 95);
+  background-color: #63060e;
+  color: white;
+  text-align: center;
+
+  max-height: 100px;
+} */
+
+/* Language dropdown orientation */
+
+.language-choice-history {
+  display: flex;
+  flex-direction: row;
+
+  /* border: 1px solid red; */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-icon {
+  color: #d7d5db;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.history-icon:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  color: #8571ce;
+}
+
+/* Style the dropdown container */
+.language-dropdown {
+  width: 200px;
+  margin: 20px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+  width: 85%;
+  color: #e3e3e4;
+  padding: 5px 20px 5px 20px;
+
+  /* Gradient Border */
+  border: 1px solid transparent; /* Use a thicker border if you want it more visible */
+  background: linear-gradient(#1d1b24, #1d1b24) padding-box,
+    /* Inner background color */
+      linear-gradient(to bottom right, #9b519c, #453366) border-box; /* Gradient border */
+}
+
+.language-choice-para {
+  /* font-family: "Lobster", sans-serif; */
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: "Roboto", sans-serif;
+  color: #cdcdcf;
+}
+
+/* Style the dropdown menu */
+.language-dropdown select {
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  background-color: transparent;
+  color: white;
+  appearance: none;
+  border: none;
+}
+
+/* Change the orientation of the dropdown menu */
+.language-dropdowndropdown select {
+  transform: scaleY(-1); /* Flip the dropdown menu vertically */
+  transform-origin: bottom; /* Set the transformation origin to the bottom */
+}
+
+.language-dropdown select:focus {
+  border: none;
+  outline: none;
+}
+
+/* Style the dropdown menu options */
+.language-dropdown select option {
+  background-color: transparent;
+  color: black;
+}
+
+.corrected_text {
+  /* border: 1px solid green; */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 20px;
+  font-size: 18px;
+  color: rgb(106, 66, 172);
+  position: relative;
+  /* height: fit-content; */
+  padding-bottom: 50px; /* Add margin at the bottom to create space for buttons */
+  background: linear-gradient(
+    to bottom right,
+    #2d273f 0%,
+    #2d293f 50%,
+    #312743 50%,
+    #533655 100%
+  );
+}
+
+.corrected-sentence {
+  display: block;
+  color: grey;
+  margin-top: 5px;
+  /* border: 1px solid red; */
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+  }
+}
